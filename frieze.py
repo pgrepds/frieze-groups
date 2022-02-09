@@ -70,8 +70,9 @@ def main():
             print('<3> Type exit to exit the program.')
     
             pattern=identity
-            x=input('')
+            x=''
             while x != 'exit':
+                x=input('')
                 m = re.search(r'(g)(-\d+|\d+)', x)
                 if m is not None:
                     gr=m.group(2)
@@ -82,7 +83,6 @@ def main():
                     pattern=horizontalFlip(pattern)
                     visualize(pattern)
                     print('\n\n')
-                x=input('')
         case _: print('Not implemented yet!')
     
 if __name__ == '__main__':
